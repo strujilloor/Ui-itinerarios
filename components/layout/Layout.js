@@ -1,11 +1,10 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
     return ( 
         <>
-            <aside>
-                <h1>SideBar</h1>
-            </aside>
+            <Sidebar/>
 
             <main>
                 { children }

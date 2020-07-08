@@ -1,3 +1,33 @@
+# Itineraries Client
+
+Itineraries Client is a project that display a itineraries list in a fun way.
+
+## Deployment
+
+https://ui-itinerarios.netlify.app/
+
+## Installation
+
+clone the repository:
+```
+https://github.com/strujilloor/Ui-itinerarios.git
+```
+Install the dependencies:
+```
+npm install
+```
+
+## Usage
+
+You can start the project and run server with the command:
+```
+yarn dev
+```
+Then open http://localhost:3000/ to see your app.
+
+___
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

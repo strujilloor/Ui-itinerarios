@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
                     --gray3: #e1e1e1;
                     --red: #BF3230;
                     --orange: #DA552F;
+                    --title-font-size: 4.9rem;
                 }
                 html {
                     font-size: 62.5%;

@@ -1,37 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Itinerary from './Itinerary';
 
-const respuesta = [
-    {
-        codigo_reserva: "RK2V89",
-        origen: "FLA",
-        destino: "BOG",
-        FechaSalida: "2018-03-14",
-        HoraSalida: "13:48",
-        FechaLLegada: "2018-03-14",
-        HoraLLegada: "15:18",
-        numero_vuelo: "9250",
-        aerolinea_validadora: "AV"
-    },
-    {
-        codigo_reserva: "RK2V89",
-        origen: "BOG",
-        destino: "BGA",
-        FechaSalida: "2018-03-14",
-        HoraSalida: "17:25",
-        FechaLLegada: "2018-03-14",
-        HoraLLegada: "18:31",
-        numero_vuelo: "9480",
-        aerolinea_validadora: "AV"
-    }
-];
-
 const Itineraries = () => {
-    const [itineraries, setItineraries] = useState(respuesta);
-    console.log(itineraries);
+    const [itineraries, setItineraries] = useState([]);
+    // console.log(itineraries);
+
+    useEffect(() => {
+        async function fetchData() {
+            const iti = [];
+            let response = await 
+                fetch(`https://intranet.tiquetesytiquetes.com/testeos/r_controller.php?itinerarios=RK2V89`);
+            let data = await response.json();
+            iti.push( ...data.respuesta );
+
+            response = await 
+                fetch(`https://intranet.tiquetesytiquetes.com/testeos/r_controller.php?itinerarios=MO4737`);
+            data = await response.json();
+            iti.push( ...data.respuesta );
+
+            console.log(iti);
+
+            setItineraries(iti);
+        }
+
+        fetchData();
+    }, []);
     return (
-        <div>
-            {/* <h1>Itinerarios</h1> */}
+        <div className="card-container">
             {
                 itineraries.map( i => (
                     <Itinerary

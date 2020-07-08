@@ -1,12 +1,33 @@
+.page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 .sidebar {
-    
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 1200px;
-    width: 95%;
-    padding: 5rem 0;
-    margin: 0 auto;
+    width: 80%;
+    /* padding: 5rem 0; */
+    /* margin: auto 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg-white {
@@ -19,4 +40,10 @@
 
 .color-white {
     color: var(--white);
+}
+
+.container .title {
+    color: var(--white);
+    font-size: 4.9rem;
+    font-weight: 600;
 }

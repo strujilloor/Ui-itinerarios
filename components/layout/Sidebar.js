@@ -2,9 +2,9 @@ import React from 'react';
 
 const Sidebar = () => {
     return (
-        <aside className="bg-green">
-            <div>
-                <h1 className="color-white">Información de vuelos</h1>
+        <aside className="sidebar bg-green">
+            <div className="container">
+                <h1 className="title">Información de vuelos</h1>
             </div>
         </aside>
     );

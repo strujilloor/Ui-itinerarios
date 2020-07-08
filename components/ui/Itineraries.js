@@ -18,7 +18,7 @@ const Itineraries = () => {
             data = await response.json();
             iti.push( ...data.respuesta );
 
-            console.log(iti);
+            // console.log(iti);
 
             setItineraries(iti);
         }

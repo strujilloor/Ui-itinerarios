@@ -44,8 +44,30 @@
     flex-wrap: wrap;
 }
 
+.card {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--gray3);
+}
+
+.card .aerolinea {
+    color: var(--red);
+    font-weight: 400;
+}
+
 .container .title {
     color: var(--white);
     font-size: 4.9rem;
     font-weight: 600;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 200;
 }
